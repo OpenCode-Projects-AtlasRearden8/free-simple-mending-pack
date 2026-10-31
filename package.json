@@ -1,0 +1,11 @@
+{
+  "name": "free-simple-mending-pack",
+  "version": "1.0.0",
+  "description": "Free printable mending guides: HTML/CSS sources that build to unbranded PDFs with a single local build script.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.js",
+    "test": "node test/build.test.js"
+  }
+}

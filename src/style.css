@@ -1,0 +1,233 @@
+:root {
+  --ink: #2b2b33;
+  --soft: #5c5c66;
+  --accent: #7a4a8f;
+  --accent-soft: #f3ecf7;
+  --line: #d9d3de;
+  --warm: #fdfaf4;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: #ffffff;
+  font-size: 11.5pt;
+  line-height: 1.5;
+}
+
+.page {
+  max-width: 7in;
+  margin: 0 auto;
+  padding: 0.6in 0.55in;
+}
+
+h1 {
+  font-size: 21pt;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 13.5pt;
+  margin: 18px 0 6px 0;
+  border-bottom: 2px solid var(--accent-soft);
+  padding-bottom: 2px;
+}
+
+h3 {
+  font-size: 11.5pt;
+  margin: 12px 0 4px 0;
+}
+
+p { margin: 6px 0; }
+
+.tagline {
+  color: var(--soft);
+  font-style: italic;
+  margin: 0 0 14px 0;
+  font-size: 10.5pt;
+}
+
+header.masthead {
+  border-bottom: 3px double var(--line);
+  margin-bottom: 8px;
+}
+
+.you-need,
+.you-will {
+  background: var(--accent-soft);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 12px 0;
+}
+
+.you-need ul,
+.you-will ul,
+.checklist ul {
+  margin: 4px 0 2px 0;
+  padding-left: 18px;
+}
+
+li { margin: 2px 0; }
+
+.steps {
+  list-style: none;
+  margin: 8px 0;
+  padding: 0;
+  counter-reset: step;
+}
+
+.steps > li {
+  counter-increment: step;
+  position: relative;
+  padding: 6px 0 6px 2.1em;
+}
+
+.steps > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 1.45em;
+  height: 1.45em;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 9.5pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tips {
+  border: 1px dashed var(--accent);
+  border-radius: 6px;
+  padding: 8px 14px;
+  margin: 12px 0;
+  background: var(--warm);
+}
+
+.tips .title {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+  font-size: 10.5pt;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--accent-soft);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.checklist li {
+  list-style: none;
+  padding: 4px 0 4px 26px;
+  position: relative;
+  border-bottom: 1px dotted var(--line);
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+}
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 7px;
+  width: 13px;
+  height: 13px;
+  border: 1.5px solid var(--accent);
+  border-radius: 3px;
+}
+
+.sig {
+  margin-top: 22px;
+  color: var(--soft);
+  font-size: 9.5pt;
+  font-style: italic;
+}
+
+.two-col {
+  display: flex;
+  gap: 16px;
+}
+
+.two-col > div { flex: 1; }
+
+.callout {
+  background: var(--warm);
+  border-left: 4px solid var(--accent);
+  padding: 8px 12px;
+  margin: 10px 0;
+  font-size: 10.5pt;
+}
+
+.practice-grid {
+  width: 100%;
+  height: 3.6in;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 0.35in 0.35in;
+  border: 1.5px solid var(--soft);
+  margin: 6px 0;
+}
+
+.practice-circles {
+  width: 100%;
+  height: 1.9in;
+  border: 1.5px solid var(--soft);
+  margin: 6px 0;
+  background-image: radial-gradient(circle at 25% 50%, transparent 0.42in, var(--warm) 0.43in),
+                    radial-gradient(circle at 50% 50%, transparent 0.42in, var(--warm) 0.43in),
+                    radial-gradient(circle at 75% 50%, transparent 0.42in, var(--warm) 0.43in),
+                    linear-gradient(var(--line) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 0.35in 0.35in, 0.35in 0.35in;
+}
+
+.cut-here {
+  text-align: center;
+  color: var(--soft);
+  font-size: 9pt;
+  margin-top: 16px;
+  border-top: 1px dashed var(--soft);
+  padding-top: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.page-break { break-before: page; }
+
+@media print {
+  body { font-size: 11pt; }
+  .page { padding: 0; }
+}
